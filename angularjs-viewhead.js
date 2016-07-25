@@ -56,6 +56,14 @@
                      // Although the physical location of the document changes, the element remains
                      // bound to the scope in which it was declared, so it can refer to variables from
                      // the view scope if necessary.
+                     var m=document.getElementsByTagName('meta');
+
+                    for(var c=0;c<m.length;c++) {
+                    if(m[c].name=='og:description') {
+                       m[c].content=''; 
+                       alert(m[c].content); /* this is for testing purposes and can be removed */
+                      }
+                     }
                      head.append(iElement);
 
                      // When the scope is destroyed, remove the element.
